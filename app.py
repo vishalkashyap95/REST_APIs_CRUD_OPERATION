@@ -19,7 +19,7 @@ def getAllProducts():
 @app.route("/api/v1/insertProduct", methods=['POST'])
 def insertProduct():
     """
-    This method calls the insertProduct() method and passes all the request body data forward for processing.
+    This method calls the insertProduct() method and passes all the request body data to insertProduct() for processing.
     :return: return success json if inserted successfully
     """
     return crudOperations.insertProduct()
@@ -36,5 +36,5 @@ def operationOnSpecificProduct(id):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
-    # app.run(debug=True)
+    # app.run(host="0.0.0.0")
+    app.run(debug=True)

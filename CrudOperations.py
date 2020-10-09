@@ -72,16 +72,16 @@ class CrudOperations:
                 try:
                     new_product = {
                         "_id": _id,
-                        "brand_name": request.form['brand_name'],
-                        "classification_l1": request.form['classification_l1'],
-                        "classification_l2": request.form['classification_l2'],
-                        "classification_l3": request.form['classification_l3'],
-                        "classification_l4": request.form['classification_l4'],
-                        "currency": request.form['currency'],
-                        "image_url": request.form['image_url'],
-                        "name": request.form['name'],
-                        "offer_price_value": int(request.form['offer_price_value']),
-                        "regular_price_value": int(request.form['regular_price_value'])
+                        "brand_name": request.json['brand_name'],
+                        "classification_l1": request.json['classification_l1'],
+                        "classification_l2": request.json['classification_l2'],
+                        "classification_l3": request.json['classification_l3'],
+                        "classification_l4": request.json['classification_l4'],
+                        "currency": request.json['currency'],
+                        "image_url": request.json['image_url'],
+                        "name": request.json['name'],
+                        "offer_price_value": int(request.json['offer_price_value']),
+                        "regular_price_value": int(request.json['regular_price_value'])
                     }
                     # print(new_product)
                     self.product_collection.insert_one(new_product)
@@ -134,16 +134,16 @@ class CrudOperations:
             sProduct = self.product_collection.find({"_id": ObjectId(idProduct)})
             if sProduct.count() == 1:
                 self.product_collection.update({"_id": ObjectId(idProduct)}, {"$set": {
-                    "brand_name": request.form['brand_name'],
-                    "classification_l1": request.form['classification_l1'],
-                    "classification_l2": request.form['classification_l2'],
-                    "classification_l3": request.form['classification_l3'],
-                    "classification_l4": request.form['classification_l4'],
-                    "currency": request.form['currency'],
-                    "image_url": request.form['image_url'],
-                    "name": request.form['name'],
-                    "offer_price_value": int(request.form['offer_price_value']),
-                    "regular_price_value": int(request.form['regular_price_value'])
+                    "brand_name": request.json['brand_name'],
+                    "classification_l1": request.json['classification_l1'],
+                    "classification_l2": request.json['classification_l2'],
+                    "classification_l3": request.json['classification_l3'],
+                    "classification_l4": request.json['classification_l4'],
+                    "currency": request.json['currency'],
+                    "image_url": request.json['image_url'],
+                    "name": request.json['name'],
+                    "offer_price_value": int(request.json['offer_price_value']),
+                    "regular_price_value": int(request.json['regular_price_value'])
                 }})
                 return jsonify(success=True, message="Successfully updated."), 200
             else:
