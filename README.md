@@ -17,7 +17,8 @@ python app.py
 </pre>
 <h1>Usage</h1>
 There are total 5 APIs. Follow below step to call/test locally.<br>
-1 - Get all products
+<b>1 - Get all products. Return all the products from the DB.</b>
 <pre>http://localhost:5000/api/v1/products</pre>
-2 - Post/Insert into DB<br>
-  3 - Dockerized entire application, and can be deployed locally with "Docker run" command.
+2 - Post/Insert into DB. Follow below steps to test it via Postman.<br>
+Copy and Paste below post URL in Postman and select method as "POST"
+  
