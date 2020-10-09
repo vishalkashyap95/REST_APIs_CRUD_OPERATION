@@ -61,8 +61,8 @@ Sample output :
     "message": "Successfully inserted with id :5f80ebbca7a9690529ff1196",
     "success": true
 }</pre>
-<b>4 - Update single product by ID. Follow below steps to test it via Postman.</b><br>
-a - Copy and Paste api/v1/product/{product_id} URL in Postman and select method as "PUT".
+<b>4 - Update all fields of single product by ID. Follow below steps to test it via Postman.</b><br>
+<pre>a - Copy and Paste api/v1/product/{product_id} URL in Postman and select method as "PUT".
 b - Set Headers "Content-Type" - "application/json"
 c - Under Body tab > Click "raw" radio button > copy and paste below json into the body and select type as "JSON".
        {
@@ -82,5 +82,12 @@ c - Under Body tab > Click "raw" radio button > copy and paste below json into t
 Sample output : 
 {
     "message": "Successfully updated.",
+    "success": true
+}</pre>
+<b>5 - Delete product by ID</b><br>
+<pre>http://localhost:5000/api/v1/product/{product_id}</pre>
+<pre>localhost:5000/api/v1/product/5f80ebbca7a9690529ff1196
+{
+    "message": "Successfully deleted.",
     "success": true
 }</pre>
