@@ -39,7 +39,7 @@ Sample output :
     }
 ]</pre>
 <b>3 - Post/Insert into DB. Follow below steps to test it via Postman.</b><br>
-<pre>a - Copy and Paste /insertProduct post URL in Postman and select method as "POST".
+<pre>a - Copy and Paste api/v1/insertProduct post URL in Postman and select method as "POST".
 b - Set Headers "Content-Type" - "application/json"
 c - Under Body tab > Click "raw" radio button > copy and paste below json into the body and select type as "JSON". Refer this link(![post_req_body](https://user-images.githubusercontent.com/46747690/95639350-c6775600-0ab5-11eb-95fe-56946bb9cfcf.PNG)).
        {
@@ -61,4 +61,26 @@ Sample output :
     "message": "Successfully inserted with id :5f80ebbca7a9690529ff1196",
     "success": true
 }</pre>
+<b>4 - Update single product by ID. Follow below steps to test it via Postman.</b><br>
+a - Copy and Paste api/v1/product/{product_id} URL in Postman and select method as "PUT".
+b - Set Headers "Content-Type" - "application/json"
+c - Under Body tab > Click "raw" radio button > copy and paste below json into the body and select type as "JSON".
+       {
+      "brand_name":"test insert update",
+      "classification_l1":"cls1",
+      "classification_l2":"",
+      "classification_l3":"",
+      "classification_l4":"",
+      "currency":"GBP",
+      "image_url":"https://cls1update.com",
+      "name":"cls1update",
+      "offer_price_value":10,
+      "regular_price_value":12
+      }</pre> 
 
+<pre>for eg : http://localhost:5000/api/v1/product/5f80ebbca7a9690529ff1196
+Sample output : 
+{
+    "message": "Successfully updated.",
+    "success": true
+}</pre>
