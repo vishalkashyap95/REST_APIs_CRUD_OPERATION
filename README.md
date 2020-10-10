@@ -41,7 +41,7 @@ Sample output :
 <b>3 - Post/Insert into DB. Follow below steps to test it via Postman.</b><br>
 <pre>a - Copy and Paste api/v1/insertProduct post URL in Postman and select method as "POST".
 b - Set Headers "Content-Type" - "application/json"
-c - Under Body tab > Click "raw" radio button > copy and paste below json into the body and select type as "JSON". Refer this link(![post_req_body](https://user-images.githubusercontent.com/46747690/95639350-c6775600-0ab5-11eb-95fe-56946bb9cfcf.PNG)).
+c - Under Body tab > Click "raw" radio button > copy and paste below json into the body and select type as "JSON". Refer this link : https://user-images.githubusercontent.com/46747690/95639350-c6775600-0ab5-11eb-95fe-56946bb9cfcf.PNG
        {
         "brand_name":"Louis Vuitton",
         "classification_l1":"Bag",
@@ -86,7 +86,8 @@ Sample output :
 }</pre>
 <b>5 - Delete product by ID</b><br>
 <pre>http://localhost:5000/api/v1/product/{product_id}</pre>
-<pre>localhost:5000/api/v1/product/5f80ebbca7a9690529ff1196
+<pre>FOr eg : http://localhost:5000/api/v1/product/5f80ebbca7a9690529ff1196
+Sample output:
 {
     "message": "Successfully deleted.",
     "success": true
