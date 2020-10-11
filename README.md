@@ -16,7 +16,7 @@ pip install -r requirements.txt
 python app.py
 </pre>
 <h1>Usage</h1>
-There are total 5 APIs. Follow below step to call/test locally.<br>
+There are total 5 APIs. Follow below steps to call/test locally.<br>
 <b>1 - Get all products.</b>
 <pre>http://localhost:5000/api/v1/products</pre>
 <b>2 - Get single product by ID.</b><br>
