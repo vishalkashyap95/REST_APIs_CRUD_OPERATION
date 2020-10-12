@@ -94,4 +94,4 @@ Sample output:
 }</pre>
 
 <h1>Tested locally and it's working fine.</h1>
-<h3><pre>Here's the video : https://vimeo.com/466756399</pre></h3>
+<h3><pre>Here's the video guide : https://vimeo.com/466756399</pre></h3>
